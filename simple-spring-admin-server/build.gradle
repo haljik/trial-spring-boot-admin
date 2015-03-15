@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'trial-spring-boot-admin-server'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'de.codecentric:spring-boot-admin-server:1.1.2'
+    compile 'de.codecentric:spring-boot-admin-server-ui:1.1.2'
+}
